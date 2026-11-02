@@ -108,10 +108,16 @@ const email = 'you@example.com';
             [data-theme='dark'] .icon-sun { display: none; }
             [data-theme='dark'] .icon-moon { display: block; }
 
-            @media (max-width: 440px) {
-                .label { padding: 0 14px; margin-right: 6px; font-size: 16px; }
-                .logo { width: 32px; }
-                .chip { width: 38px; }
+            /* Mobile: the label moves to the middle of the screen, the nav sits at the bottom */
+            @media (max-width: 600px) {
+                body { align-items: end; padding-bottom: 32px; }
+                .label {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0;
+                }
             }
         </style>
     </head>
