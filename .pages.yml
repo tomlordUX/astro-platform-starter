@@ -1,0 +1,44 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: projects
+    label: Projects
+    type: collection
+    path: src/content/projects
+    filename: "{primary}.md"
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: summary
+        label: Summary
+        type: text
+      - name: cover
+        label: Cover image
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
+
+  - name: about
+    label: About page
+    type: file
+    path: src/content/pages/about.md
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: portrait
+        label: Portrait
+        type: image
+      - name: body
+        label: Body
+        type: rich-text
